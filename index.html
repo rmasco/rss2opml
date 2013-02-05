@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>RSS to OPML</title>
+
+        <link rel=”author” href=”//plus.google.com/u/0/100326709207293080642/posts” />
+              <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet" />
+        <link href="bootstrap/css/bootstrap-responsive.min.css" rel="stylesheet" />
+        <link href="css/index.css" rel="stylesheet" />
+
+        <script type="text/javascript">
+
+            var _gaq = _gaq || [];
+            _gaq.push(['_setAccount', 'UA-3590063-30']);
+            _gaq.push(['_trackPageview']);
+
+            (function() {
+                var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+                ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+                var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+            })();
+
+        </script>
+    </head>
+    <body>
+        <div class="navbar navbar-inverse navbar-fixed-top">
+            <div class="navbar-inner">
+                <div class="container">
+                    <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </a>
+                    <a class="brand" href="">RSS to OPML</a>
+                    <div class="nav-collapse collapse">
+                        <ul class="nav">
+                            <li class="active"><a href="">Home</a></li>
+                            <li><a href="//blog.rmasco.com/">Blog</a></li>
+                            <li><a href="//www.facebook.com/rmasco">Facebook</a></li>
+                            <li><a href="//twitter.com/rmasco">Twitter</a></li>
+                        </ul>
+                    </div><!--/.nav-collapse -->
+                </div>
+            </div>
+        </div>
+        <div class="container">
+            <div class="hero-unit">
+                <h1>RSS to OPMLとは</h1>
+                <p>RSS to OPMLはお好きな検索ワードで検索したRSSをGoogleリーダーなどでインポートできるOPMLという形式のファイルを生成してくれるサービスです。</p>
+            </div>
+            <div class="row">
+                <div class="control-group">
+                    <label class="control-label" for="serch-text">検索：</label>
+                    <div class="controls">
+                        <form class="form-search">
+                            <input type="text" id="serch-text" class="input-medium search-query" />
+                            <button type="button" id="search" class="btn btn-primary" data-loading-text="Loading...">Search</button>
+                        </form>                    
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div id="search-result" class="span4">
+
+                </div>
+            </div>
+            <div class="modal fade" id="search-modal" aria-hidden="true">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                    <h3>OPML作成完了</h3>
+                </div>
+                <div class="modal-body">
+                    <p>下記テキストをコピーしてテキストファイルとして保存してください。</p>
+                    <p>保存したファイルをGoogleリーダーなどでインポートすると、更新記事を読むことができます。</p>
+                    <textarea id="opml-result"></textarea>
+                </div>
+                <div class="modal-footer">
+                    <button class="btn btn-danger" data-dismiss="modal" aria-hidden="true">Close   </button>
+                </div>
+            </div>
+        </div>
+        <!--[if lt IE 9]>
+          <script src="//html5shim.googlecode.com/svn/trunk/html5.js"></script>
+        <![endif]-->
+
+        <script type="text/javascript" src="//www.google.com/jsapi"></script>
+        <script type="text/javascript">
+            google.load("feeds", "1");
+        </script>
+
+
+
+        <script src="js/jquery-1.8.2.min.js"></script>
+        <script src="bootstrap/js/bootstrap.min.js"></script>
+        <script src="js/xmlencoder.js"></script>
+        <script src="js/index.js"></script>
+
+    </body>
+</html>
